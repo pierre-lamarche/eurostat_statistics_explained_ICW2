@@ -11,6 +11,16 @@ library(eurostat)
 library(reshape2)
 library(plot3D)
 
+col1 <- rgb(250, 165, 25, maxColorValue = 255)
+col1_faded <- rgb(251, 200, 117, maxColorValue = 255)
+col2 <- rgb(40, 110, 180, maxColorValue = 255)
+col2_faded <- rgb(113, 168, 223, maxColorValue = 255)
+col3 <- rgb(240, 99, 34, maxColorValue = 255)
+col3_faded <- rgb(246, 162, 123, maxColorValue = 255)
+col4 <- rgb(185, 195, 30, maxColorValue = 255)
+col5 <- rgb(93, 179, 64, maxColorValue = 255)
+
+
 #################################################################################################################################################
 ### FIGURE 1
 #################################################################################################################################################
