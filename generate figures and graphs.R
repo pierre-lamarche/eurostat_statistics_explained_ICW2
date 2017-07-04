@@ -15,7 +15,16 @@ library(plot3D)
 ### FIGURE 1
 #################################################################################################################################################
 
+joint_dist <- get_eurostat("icw_sr_07", time_format = "num")
+jointDist <- filter(joint_dist, 
+                    geo == "BE")
+jointDist <- mutate(jointDist,
+                    q_inc = as.numeric(substr(quant_inc,2,3)),
+                    q_exp = as.numeric(substr(quant_expn,2,3)))
+matJointDist <- acast(data = jointDist, q_exp~q_inc, value.var = "values")/10
 
+hist3D(1:10,1:10, matJointDist, xlab = "Income", ylab = "Consumption", 
+       border = "grey", space = 0.2)
 
 #################################################################################################################################################
 ### FIGURE 2
